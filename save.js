@@ -23,8 +23,8 @@ function finalFormat(seconds) {
 }
 
 function update() {
-    var startSeconds = 1628154370;
-    var save = 10000;
+    var startSeconds = 1626660000;
+    var save = 32000 + 4828.14 + 2000 + 1500 + 2000;
     var id = setInterval(flush, 1000)
 
     function flush() {
@@ -36,10 +36,10 @@ function update() {
         document.getElementById('currentSeconds').value = currentSeconds;
         var currentTime = format(currentSeconds * 1000);
         document.getElementById('currentTime').value = currentTime;
-        var Incomes = (currentSeconds - startSeconds) * 0.0031;
+        var Incomes = (currentSeconds - startSeconds) * 0.0021;
         document.getElementById('Incomes').value = Incomes;
         document.getElementById('retSave').value = save - Incomes;
-        var final = parseInt((save - Incomes) / 0.0031);
+        var final = parseInt((save - Incomes) / 0.0021);
         var finalseconds = final * 1000;
         var finalTime = finalFormat(finalseconds);
         document.getElementById('finalTime').value = finalTime;
